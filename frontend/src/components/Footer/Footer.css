@@ -1,0 +1,56 @@
+.footer{
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+.footer-content{
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 30px;
+    text-align: center;
+}
+
+.footer-content-left, .footer-content-right, .footer-content-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align for mobile */
+    gap: 15px;
+}
+
+/* For larger screens, use 3 columns */
+@media (min-width: 768px){
+    .footer-content{
+        grid-template-columns: 2fr 1fr 1fr;
+        text-align: left;
+    }
+    
+    .footer-content-left, .footer-content-right, .footer-content-center{
+        align-items: start;
+    }
+}
+
+.footer-social-icons img{
+    width: 35px;
+    margin: 0 8px; /* Even spacing around icons */
+}
+
+@media (max-width:750px){
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 25px; /* Reduced from 35px */
+    }
+
+    .footer-copyright{
+        text-align: center;
+        font-size: 14px;
+    }
+}
